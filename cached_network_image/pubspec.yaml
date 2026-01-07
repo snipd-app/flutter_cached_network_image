@@ -10,7 +10,7 @@ version: 3.4.1
 
 environment:
   sdk: ^3.0.0
-  flutter: '>=3.10.0'
+  flutter: '>=3.13.0'
 
 dependencies:
   cached_network_image_platform_interface: ^4.1.1

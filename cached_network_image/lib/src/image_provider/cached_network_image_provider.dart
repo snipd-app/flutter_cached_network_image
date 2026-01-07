@@ -88,13 +88,10 @@ class CachedNetworkImageProvider
     );
 
     if (errorListener != null) {
-      imageStreamCompleter.addListener(
-        ImageStreamListener(
-          (image, synchronousCall) {},
-          onError: (Object error, StackTrace? trace) {
-            errorListener?.call(error);
-          },
-        ),
+      imageStreamCompleter.addEphemeralErrorListener(
+        (Object error, StackTrace? trace) {
+          errorListener?.call(error);
+        },
       );
     }
 
@@ -139,13 +136,10 @@ class CachedNetworkImageProvider
     );
 
     if (errorListener != null) {
-      imageStreamCompleter.addListener(
-        ImageStreamListener(
-          (image, synchronousCall) {},
-          onError: (Object error, StackTrace? trace) {
-            errorListener?.call(error);
-          },
-        ),
+      imageStreamCompleter.addEphemeralErrorListener(
+        (Object error, StackTrace? trace) {
+          errorListener?.call(error);
+        },
       );
     }
 
